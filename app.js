@@ -57,3 +57,30 @@ navIcons.forEach((icon, index) => {
     }, 1000);
   });
 });
+
+// ? =========== Toggle Menu close Button LOGIC ===========
+const openBtn = document.querySelector(".open");
+const closeBtn = document.querySelector(".close");
+const dropDown = document.querySelector(".mobileDropdown");
+
+openBtn.addEventListener("click", (e) => {
+  openBtn.style.display = "none";
+  closeBtn.style.display = "block";
+  dropDown.style.display = "block";
+});
+
+closeBtn.addEventListener("click", (e) => {
+  closeBtn.style.display = "none";
+  dropDown.style.display = "none";
+  openBtn.style.display = "block";
+});
+
+(function () {
+  window.onresize = displayWindowSize;
+  window.onload = displayWindowSize;
+
+  function displayWindowSize() {
+    let myWidth = window.innerWidth;
+    myWidth > 1000 ? (dropDown.style.display = "none") : false;
+  }
+})();

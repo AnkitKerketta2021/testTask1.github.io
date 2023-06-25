@@ -18,6 +18,12 @@
     <!--? ==================== Ionicons ==================== -->
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 
+
+    <!--? ==================== Bootstrap ==================== -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -39,7 +45,8 @@
                     <li class="navbar__rightSection_navList-items"><a href="#contact">Contact</a></li>
                 </ul>
                 <div class="navbar__rightSection-menuBtn">
-                    <ion-icon name="menu"></ion-icon>
+                    <ion-icon class="navbar__rightSection-open open" name="menu"></ion-icon>
+                    <ion-icon class="close" name="close"></ion-icon>
                 </div>
             </div>
         </nav>
@@ -70,6 +77,84 @@
 
 
         <!-- ! ============================== Mobile Dropdown ============================== -->
+        <div class="mobileDropdown">
+            <p>
+                <button class="btn btn-light mobileDropdown-btn" data-bs-toggle="collapse" data-bs-target="#mobileDropdown-link1" aria-expanded="false" aria-controls="mobileDropdown-link1">
+                    <div class="d-flex justify-content-between"><div class="mobileDropdown-text">Ipsum</div><div class="mobileDropdown-logo"><ion-icon style="color: red; z-index: 10;" name="chevron-down-outline"></ion-icon></div></div>
+                </button>
+              </p>
+              <ul class="collapse mobileDropdown--list" id="mobileDropdown-link1">
+                <li class="mobileDropdown--list-item">
+                 <a href="#home">Link</a>
+                </li>
+                <li class="mobileDropdown--list-item">
+                    <a href="#trending">Link</a>
+                </li>
+                <li class="mobileDropdown--list-item">
+                 <a href="#explore">Link</a>
+                </li>
+                <li class="mobileDropdown--list-item">
+                 <a href="#contact">Link</a>
+                </li>
+              </ul>
+            <p>
+                <button class="btn btn-light mobileDropdown-btn" data-bs-toggle="collapse" data-bs-target="#mobileDropdown-link2" aria-expanded="false" aria-controls="mobileDropdown-link2">
+                    Ipsum
+                </button>
+              </p>
+              <ul class="collapse mobileDropdown--list" id="mobileDropdown-link2">
+                <li class="mobileDropdown--list-item">
+                    <a href="#home">Link</a>
+                   </li>
+                   <li class="mobileDropdown--list-item">
+                       <a href="#trending">Link</a>
+                   </li>
+                   <li class="mobileDropdown--list-item">
+                    <a href="#explore">Link</a>
+                   </li>
+                   <li class="mobileDropdown--list-item">
+                    <a href="#contact">Link</a>
+                   </li>
+              </ul>
+            <p>
+                <button class="btn btn-light mobileDropdown-btn" data-bs-toggle="collapse" data-bs-target="#mobileDropdown-link3" aria-expanded="false" aria-controls="mobileDropdown-link3">
+                    Ipsum
+                </button>
+              </p>
+              <ul class="collapse mobileDropdown--list" id="mobileDropdown-link3">
+                <li class="mobileDropdown--list-item">
+                    <a href="#home">Link</a>
+                   </li>
+                   <li class="mobileDropdown--list-item">
+                       <a href="#trending">Link</a>
+                   </li>
+                   <li class="mobileDropdown--list-item">
+                    <a href="#explore">Link</a>
+                   </li>
+                   <li class="mobileDropdown--list-item">
+                    <a href="#contact">Link</a>
+                   </li>
+              </ul>
+            <p>
+                <button class="btn btn-light mobileDropdown-btn" data-bs-toggle="collapse" data-bs-target="#mobileDropdown-link4" aria-expanded="false" aria-controls="mobileDropdown-link4">
+                    Ipsum
+                </button>
+              </p>
+              <ul class="collapse mobileDropdown--list" id="mobileDropdown-link4">
+                <li class="mobileDropdown--list-item">
+                    <a href="#home">Link</a>
+                   </li>
+                   <li class="mobileDropdown--list-item">
+                       <a href="#trending">Link</a>
+                   </li>
+                   <li class="mobileDropdown--list-item">
+                    <a href="#explore">Link</a>
+                   </li>
+                   <li class="mobileDropdown--list-item">
+                    <a href="#contact">Link</a>
+                   </li>
+              </ul>
+        </div>
         
 
         <!-- ! ============================== Heading ============================== -->
