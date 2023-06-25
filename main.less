@@ -828,7 +828,7 @@ body {
         }
 
         &-button {
-          width: 16.5rem ;
+          width: 16.5rem;
           height: 5rem;
         }
       }
@@ -936,6 +936,9 @@ body {
 
 // ? =========================== MOBILE VIEW ===========================
 @media screen and (@mobileView) {
+  body {
+    background: @color-light;
+  }
 
   // * ======================== NAVBAR =======================
   .navbar {
@@ -1029,6 +1032,15 @@ body {
         &1 {
           width: @primary-space*5;
           margin: @primary-space*2 auto;
+        }
+
+        &2,
+        &3 {
+          text-align: center;
+          position: relative;
+          top: -4rem;
+          width: @primary-space*4;
+          margin: auto;
         }
       }
     }
