@@ -820,9 +820,8 @@ body {
 }
 @media screen and ((max-width: 375px)) {
   .navbar {
-    width: 240vw;
+    width: 100vw;
     margin: auto;
-    padding: 0 2.4rem;
   }
   .navbar__rightSection-menuBtn {
     display: block;
@@ -832,17 +831,13 @@ body {
   }
   .heading {
     width: 37.5rem;
-    margin: 2.4rem 70%;
   }
   .contactSection {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 2.4rem;
+    padding: 2.4rem;
     width: 37.5rem;
-    width: 39.9rem;
-    position: relative;
-    left: 50%;
   }
   .contactSection__left p {
     display: inline-block;
@@ -854,56 +849,74 @@ body {
     margin: 2.4rem 30%;
   }
   .trendingSection {
-    width: 44.5rem;
-    margin-bottom: 60rem;
     display: flex;
     flex-direction: column;
-    margin: 2.4rem 20%;
-    margin-bottom: 57.6rem;
   }
   .trendingSection__left-img {
-    width: 72rem;
-    height: 40.5rem;
+    width: 37.5rem;
+    height: 22.5rem;
+  }
+  .trendingSection__left-text {
+    width: 37.5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
   .trendingSection__right {
-    height: 36rem;
+    height: 32rem;
   }
   .trendingSection__right-img {
-    margin-top: -1.6rem;
+    width: 37.5rem;
+  }
+  .trendingSection__right-img::after {
+    position: absolute;
+    bottom: -2.5rem;
+    content: "";
+    width: inherit;
+    height: 5rem;
+    background: #ffffff;
+  }
+  .trendingSection__right-text {
+    width: 37.5rem;
+  }
+  .trendingSection__right_bottom-content {
+    width: 37.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .trendingSection__right_bottom-content1 {
+    width: 12rem;
+    margin: 4.8rem auto;
   }
   .exploreSection {
     margin-top: 20rem;
-    width: 39.9rem;
-    position: relative;
-    left: 50%;
   }
   .exploreSection__gallery {
     width: 37.5rem;
     grid-template-columns: 1fr;
+    position: relative;
   }
   .exploreSection__gallery_cards {
-    width: 35.1rem;
-    height: 37.5rem;
+    width: 30.3rem;
+    height: 32.7rem;
   }
   .exploreSection__gallery_cards-image {
-    width: 35.1rem;
-    height: 18rem;
+    width: 30.3rem;
+    height: 16rem;
   }
   .exploreSection__gallery_cards-text {
-    width: inherit;
+    width: 16.8rem;
   }
   .exploreSection__gallery_cards-button {
     width: 20.5rem;
     height: 5.9rem;
+    top: -5rem;
   }
   .visitAgain_Section {
     margin-bottom: 43.2rem;
     display: grid;
     grid-template-columns: 1fr;
     background: #ffffff;
-    width: 39.9rem;
-    position: relative;
-    left: 50%;
   }
   .visitAgain_Section__left-title {
     font-size: 1.8rem;
@@ -940,52 +953,46 @@ body {
   }
   .exploreMoreSection {
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
-    gap: 4rem;
-    width: 39.9rem;
-    position: relative;
-    left: 50%;
-  }
-  .exploreMoreSection__left {
-    gap: 4rem;
+    padding: 1rem;
+    width: 37.5rem;
   }
   .exploreMoreSection__left-title {
     font-size: 1.6rem;
+    padding-left: 1rem;
   }
   .exploreMoreSection__left--list {
-    gap: 2.4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
   .exploreMoreSection__left--list li a {
     padding-bottom: 1.6rem;
     font-weight: 300;
   }
-  .exploreMoreSection__mid {
-    gap: 4rem;
-  }
   .exploreMoreSection__mid-title {
     font-size: 1.6rem;
   }
   .exploreMoreSection__mid--list {
-    gap: 2.4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
   .exploreMoreSection__mid--list li a {
     padding-bottom: 1.6rem;
     font-weight: 300;
   }
-  .exploreMoreSection__right--list {
-    gap: 2.4rem;
-  }
   .exploreMoreSection__right--list li a {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     color: #003057;
-    font-weight: 700;
+    font-weight: 900;
   }
   .footerSection {
-    width: 39.9rem;
-    position: relative;
-    left: 50%;
-    width: 250%;
-    transform: translate(-20%);
-    padding: 2.4rem !important;
+    padding: 2.4rem;
+    text-align: justify;
+  }
+  .footerSection__subtitle1,
+  .footerSection__subtitle2 {
+    width: 80%;
+    margin: auto;
   }
 }
