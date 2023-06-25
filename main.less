@@ -1,0 +1,1159 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap");
+
+// ! =============== VARIABLES ===============
+// colors
+@bg-color: #f9f9f9;
+@color-primary: #003057;
+@color-tertiary: #666666;
+@color-secondary: #262628;
+@color-light: #ffffff;
+@color-dark: #000000;
+
+// Typography
+@font-size-small: 1.6rem;
+@font-size-normal: 1.8rem;
+@font-size-large: 2.4rem;
+@font-size-xlarge: 3.2rem;
+@font-size-2xlarge: 4.8rem;
+@font-inter: "Inter", sans-serif;
+@font-montserrat: "Montserrat", sans-serif;
+
+@primary-space: 2.4rem;
+
+// Transition
+@transition-short: 0.3s;
+@transition-normal: 0.5s;
+@transition-long: 0.9s;
+
+// Media Queries Screen
+@tabletView: ~"(max-width: 768px)";
+@mobileView: ~"(max-width: 375px)";
+
+
+// Images
+@image1: url(https://s3-alpha-sig.figma.com/img/818f/adde/6a112a223d09b28865f26f6f6d06a626?Expires=1688342400&Signature=jfN9RtWbPPQp0uT4DDDV~Sb1BOe~hzgEWxs1C0mJNYcqARa4Y7WStCPHQNXr7en6VfSGnrJVLjHrTWkdAoqDQbXx04SWi4e-fam3cpx1PFBG0mL4XqVv-3p9E3aAfBs9jvZ8i6TqJqcOCeanNWE42y5CbGnZwIArp7DTpU9uhNvc4es4nCsm5Qm6YlqIv7Wff-TGIV6Uzuy7xt8EqHQLmE7BUC5VtYwFOTTM01rudXwyW~g0xHvBqOV6anbSEJE0lp~b6t1S0Cdzbp6jlW8l0V7P0bjVQod72RS0RPxLjMLMHYnfJ1Qqarmi1BuzEdY1WIYlQvcLPVYN2H548Bs04g__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4);
+
+@image2: url(https://s3-alpha-sig.figma.com/img/55ec/2439/1dc4cd7a9a6f4d52527e807d6d15637f?Expires=1688342400&Signature=T9xG~4uZAyVoPcarm48-xwsle9xKUNBnPRnIwqiletNujzB-lYUnczGR4T0vz8al1kxIJ9yvirFWwSIBLBVpUHOkC0y9Ui~p3L0d9JqCgnV0FqpqUI-zVTO4pRouivTLcdJ4GOLOOSdK9gSNLwLateBlI7VoV0X4yZ0J0~KZ7TMHs8lH4YiubiyPfD-gujWiAKeJt4FQN8dUxLugVhFAFoWjxGdnMcHPGhGgb-lHIEeQwgo1kXQ0iBWmQ7Kh~5i1MYRBNrMPaXvQxWM4~podK-7lLGwWJmh3V8psH2I-3BOO9eEopNOrl9GQ27GrmS-oZrRls9tZpcxC864PyiJKvg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4);
+
+@image3: url(https://s3-alpha-sig.figma.com/img/53c9/7097/c32a999e2aea31bbbefb072202def5d2?Expires=1688342400&Signature=gDCTpHCo~F9TEQ3xPjOOXU~jV4vei2rk-KB2fLnn4vohCS4d4RBK-tK0pxDw4wy77WxICSFRMthmZFlfmrMJdp8TP0FueF7Q6tGywdAqdFszyVuZWOhyPZd9JwYvs2TINi6FzCD9f6X8kGri9gqPHkJaAi~sgPb4-j~Rjhi8fkqVkxo9qeT3EZyLMLLTYBQILfIHywqX7hbMCvHL9yopqAUmpGHNvxsdMQGt6WubG4CpDX2dECfdFTZoAfU8oYWzpxS7Y0RDITWgFUZnL~AxojTQISTO0WSep2-i997syNibY0FZ7EAoIWh-XRNy5gOWlkX3z0TgA4~IbmYokASaVQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4);
+
+// ! ========================= Mixins =========================
+.exploreMoreHeader() {
+  font-size: @font-size-normal;
+  color: @color-dark;
+  font-weight: 900;
+  margin-bottom: @primary-space;
+}
+
+.exploreMoreHoverItems() {
+  &:hover {
+    text-decoration: underline;
+    text-decoration-color: @color-tertiary;
+    text-decoration-thickness: 0.1rem;
+  }
+}
+
+.trendingSectionCardBtnHover(@color-primary, @color-light ) {
+  background-color: @color-primary;
+  color: @color-light;
+}
+
+.alignItemCenter-MobileView {
+  width: 37.5rem + @primary-space;
+  position: relative;
+  left: 50%;
+}
+
+// ! =====================================================================================================================
+// ! =====================================================================================================================
+z * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: @font-inter;
+}
+
+// * ======================== SCROLLBAR =======================
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(122, 122, 122, 0.8);
+  border-radius: 1rem;
+  background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+  background-color: #888;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: @bg-color;
+}
+
+// * ======================== NAVBAR =======================
+.navbar {
+  width: 95%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  background: @color-light;
+  height: 7.2rem;
+
+  &__leftSection {
+    display: flex;
+
+    &-logo {
+      font-size: @font-size-2xlarge;
+      transform: rotate(45deg);
+
+      & a {
+        color: @color-primary;
+        transition: @transition-short;
+
+        &:hover {
+          color: @color-dark;
+        }
+      }
+    }
+  }
+
+  &__rightSection {
+    padding: @primary-space;
+
+    &-menuBtn {
+      display: none;
+      font-size: @font-size-2xlarge;
+      margin: -1rem;
+    }
+
+    &_navList {
+      display: flex;
+      justify-content: space-between;
+      gap: @primary-space;
+
+      &-items {
+        list-style: none;
+
+        a {
+          height: 7.2rem;
+          margin: @primary-space;
+          font-size: @font-size-normal;
+          text-decoration: none;
+          color: @color-tertiary;
+          font-weight: 600;
+          transition: @transition-short;
+          z-index: 1;
+          position: relative;
+          transition: @transition-short;
+
+          &:hover {
+            color: @color-primary;
+
+            &::before {
+              content: "";
+              left: -2.25rem;
+              position: absolute;
+              top: -2.3rem;
+              width: 10.8rem;
+              height: 7rem;
+              background: @bg-color;
+              z-index: -1;
+            }
+
+            &::after {
+              content: "";
+              position: absolute;
+              left: -2.25rem;
+              bottom: -2.7rem;
+              width: 10.8rem;
+              height: 0.25rem;
+              background: @color-primary;
+              z-index: -1;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// * ======================== DEKTOP DROPDOWN =======================
+.desktopDropdown {
+  display: flex;
+  justify-content: center;
+  width: 87.2rem;
+  padding: 0 @primary-space;
+  gap: @primary-space;
+  background: @bg-color;
+  margin: @primary-space 30.5rem @primary-space;
+  background: @bg-color;
+  position: absolute;
+  display: none;
+  z-index: 1;
+
+  &--list {
+    display: flex;
+    flex-direction: column;
+    height: 24.5rem;
+
+    &-title {
+      font-size: (@font-size-small - 0.2rem);
+      font-weight: 700;
+    }
+
+    ul {
+      list-style: none;
+
+      li {
+        // gap: @primary-space;
+        padding: 0.8rem;
+        width: 40.4rem;
+
+        a {
+          font-size: (@font-size-small - 0.2rem);
+          padding: 0.8rem 0.8rem 0.8rem @primary-space;
+          text-decoration: none;
+          color: @color-secondary;
+          font-weight: 300;
+          width: 40.4rem;
+          padding-right: (40.4rem - @primary-space);
+
+          &:hover {
+            text-decoration: underline;
+            background: rgba(@color-dark, 0.03);
+          }
+        }
+      }
+    }
+  }
+}
+
+// * ======================== HEADING =======================
+.heading {
+  font-size: @font-size-2xlarge;
+  font-weight: 300;
+  text-align: center;
+  color: @color-primary;
+  margin: @primary-space*2 auto;
+
+  &-bold {
+    font-weight: 900;
+  }
+}
+
+// * ======================== CONTACT SECTION =======================
+.contactSection {
+  width: 93.86%;
+  display: flex;
+  justify-content: space-between;
+  margin: @primary-space auto;
+
+  &__left {
+    display: flex;
+
+    &-text {
+      font-size: @font-size-small;
+      color: @color-dark;
+      font-weight: 700;
+      padding-top: 1rem;
+    }
+  }
+
+  &__right {
+    display: flex;
+    gap: 1rem;
+
+    &_btns {
+      border: 0.1rem solid @color-primary;
+      padding: 1rem;
+      width: 20.5rem;
+      text-align: center;
+      transition: @transition-short;
+
+      margin: 0.1rem solid @color-primary;
+
+      &-icon {
+        font-size: @font-size-normal;
+        padding: 0.1rem 0.6rem;
+      }
+
+      &-text {
+        font-size: @font-size-normal;
+        font-weight: 700;
+      }
+
+      &:hover {
+        background: @color-primary;
+        color: @color-light;
+      }
+    }
+  }
+}
+
+// * ======================== TRENDING SECTION =======================
+.trendingSection {
+  width: 93.86%;
+  height: 39.82rem;
+  margin: auto;
+  display: flex;
+  gap: @primary-space;
+  position: relative;
+
+  &__left {
+
+    &-img {
+      display: flex;
+      margin-top: @font-size-small;
+      width: 70rem;
+      height: 100%;
+      background-image: @image1;
+      background-position: center;
+      background-size: cover;
+      position: relative;
+
+      &::after {
+        position: absolute;
+        bottom: -5rem;
+        content: "";
+        width: inherit;
+        height: 6.9rem;
+        background: @color-light;
+        z-index: -1;
+      }
+    }
+
+    &-text {
+      width: 100%;
+      position: relative;
+      left: 0;
+      text-align: center;
+      margin: @primary-space - 1rem;
+
+      & span {
+        padding: 0 1rem;
+      }
+
+      & a {
+        color: @color-primary;
+        font-size: @font-size-small;
+        text-decoration: none;
+        padding: 0 0.4rem;
+        font-weight: 700;
+      }
+    }
+  }
+
+  &__right {
+    width: 72rem;
+    height: 31rem;
+
+    &-text {
+      text-align: center;
+      background: @color-light;
+    }
+
+    &-text1 {
+      color: @color-secondary;
+      font-size: @font-size-small;
+      padding-top: @primary-space;
+    }
+
+    &-text2 {
+      color: @color-primary;
+      font-size: @font-size-large;
+      font-weight: 900;
+    }
+
+    &-text3 {
+      color: @color-primary;
+      padding-bottom: @primary-space - 1rem;
+      font-size: @font-size-small;
+      text-decoration: underline;
+      font-weight: 300;
+    }
+
+    &-img {
+      background-image: @image2;
+      display: inline-block;
+      margin-top: -1rem;
+      width: 100%;
+      height: 92%;
+      z-index: 1;
+      background-position: center;
+      background-size: cover;
+      position: relative;
+
+      &::before {
+        position: absolute;
+        top: 0;
+        content: "";
+        width: inherit;
+        // height: 6.5rem;
+        background: @bg-color;
+      }
+
+      &::after {
+        position: absolute;
+        bottom: -0.5rem;
+        content: "";
+        width: inherit;
+        height: 7.2rem;
+        background: @color-light;
+      }
+    }
+
+    &_bottom-content {
+      display: flex;
+      justify-content: space-around;
+      position: relative;
+      top: -5.2rem;
+      z-index: 1;
+      gap: @primary-space;
+
+      &1 {
+        font-size: @font-size-small;
+        color: @color-light;
+        background: @color-primary;
+        padding: 0.8rem 1.6rem;
+        border-radius: 4.8rem;
+        transition: @transition-short;
+
+        & ion-icon {
+          transform: rotate(-45deg);
+        }
+
+        &:hover {
+          opacity: 0.9;
+        }
+
+        & a {
+          color: @color-light;
+          text-decoration: none;
+        }
+      }
+
+      &2 {
+        font-size: @font-size-small;
+        font-weight: 300;
+      }
+
+      &3 {
+        font-size: @font-size-small;
+        color: @color-primary;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+// * ======================== EXPLORE SECTION =======================
+.exploreSection {
+  width: 93.86%;
+  width: 95%;
+  padding: @primary-space;
+  background: @color-light;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+
+    &-title {
+      font-size: @font-size-large;
+      color: @color-secondary;
+      font-weight: 900;
+    }
+
+    &-link {
+      margin: @primary-space;
+    }
+  }
+
+  &__gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: @primary-space;
+
+    &_cards {
+      width: 32rem;
+      height: 40rem;
+      padding: @primary-space;
+      background: @bg-color;
+      transition: @transition-short;
+
+      &:hover {
+        background: #f1f1f1f1;
+        box-shadow: 3px 1px 0.7rem rgba(0, 0, 0, 0.15);
+      }
+
+      &-image {
+        background-image: @image1;
+        display: inline-block;
+        width: 100%;
+        height: 50%;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+      }
+
+      &-text {
+        text-align: center;
+        font-size: @font-size-small;
+        margin: @primary-space auto;
+        color: @color-secondary;
+        font-weight: 300;
+        line-height: 150%;
+      }
+
+      &-button {
+        text-align: center;
+        border: 0.1rem solid @color-primary;
+        width: 19.9rem;
+        margin: auto;
+        transition: @transition-short;
+
+        &:hover {
+          .trendingSectionCardBtnHover(@color-primary, @color-light);
+        }
+
+        & button {
+          border: none;
+          background: none;
+          padding: 1.6rem 0;
+          color: @color-primary;
+          font-size: @font-size-normal;
+          font-weight: 700;
+          transition: @transition-short;
+        }
+
+        ion-icon {
+          font-size: @font-size-small;
+          padding: 0 0.5rem;
+          transition: @transition-short;
+        }
+      }
+    }
+  }
+}
+
+// * ======================== VISIT AGAIN SECTION =======================
+.visitAgain_Section {
+  width: 93.86%;
+  width: 95%;
+  height: 36.6rem;
+  margin: 10rem auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4.8rem;
+
+  &__container {
+    filter: hue-rotate(hue(hsl(0, 0%, 100%))) saturate(1) brightness(lightness(hsl(0, 0%, 100%)));
+
+    &-backgroundImg {
+      background-image: @image3;
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      background-size: cover;
+      position: relative;
+      filter: hue-rotate(hue(hsl(0, 0%, 20%))) saturate(saturation(hsl(0, 7%, 31%))) brightness(lightness(hsl(0, 0%, 20%)));
+      transition: @transition-short;
+
+      &:hover {
+        filter: hue-rotate(hue(hsl(0, 0%, 40%))) saturate(saturation(hsl(0, 7%, 50%))) brightness(lightness(hsl(0, 0%, 40%)));
+      }
+    }
+
+    &--content {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      justify-content: space-around;
+      width: 80%;
+
+      &-button {
+        color: @color-light;
+        display: flex;
+        gap: 0.5rem;
+        font-size: @font-size-normal;
+        border: 1px solid @color-light;
+        height: 100%;
+        padding: 12px 18px;
+
+        &:hover {
+          background: @color-dark;
+        }
+
+        button {
+          border: none;
+          background: none;
+          color: @color-light;
+        }
+      }
+
+      &::before {
+        content: "";
+        width: @primary-space + 1.5rem;
+        height: @primary-space - 2rem;
+        background-color: @color-light;
+        position: relative;
+        top: -@primary-space;
+        left: @primary-space;
+      }
+
+      &-text {
+        color: @color-light;
+        font-size: (@font-size-xlarge - 0.2rem);
+        font-weight: 900;
+      }
+    }
+  }
+}
+
+// * ======================== EXPLORE MORE SECTION =======================
+.exploreMoreSection {
+  width: 93.86%;
+  width: 95%;
+  margin: 10rem auto;
+  display: flex;
+  justify-content: space-between;
+
+  &__left {
+    &-title {
+      .exploreMoreHeader();
+    }
+
+    &--list {
+      display: flex;
+      justify-content: space-between;
+      gap: @primary-space*10rem;
+
+      &1,
+      &2 {
+        list-style: none;
+
+        li>a {
+          display: block;
+          font-size: @font-size-small;
+          color: @color-tertiary;
+          font-weight: 200;
+          text-decoration: none;
+          line-height: 150%;
+          .exploreMoreHoverItems();
+        }
+      }
+    }
+  }
+
+  &__mid {
+    &-title {
+      .exploreMoreHeader();
+    }
+
+    &--list {
+      display: flex;
+      justify-content: space-between;
+      gap: @primary-space*8rem;
+
+      &1,
+      &2 {
+        list-style: none;
+
+        li>a {
+          display: block;
+          font-size: @font-size-small;
+          color: @color-tertiary;
+          font-weight: 200;
+          text-decoration: none;
+          line-height: 150%;
+          .exploreMoreHoverItems();
+        }
+      }
+    }
+  }
+
+  &__right {
+    &-title {
+      .exploreMoreHeader();
+    }
+
+    &--list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+
+      li>a {
+        text-decoration: none;
+        font-size: @font-size-small;
+        color: @primary-space;
+        .exploreMoreHoverItems();
+      }
+    }
+  }
+}
+
+// * ======================== FOOTER SECTION =======================
+.footerSection {
+  width: 100%;
+  height: 15rem;
+  background: @color-primary;
+
+  &__title {
+    font-family: @font-montserrat;
+    font-size: @font-size-large;
+    font-weight: 900;
+    text-align: center;
+    color: @color-light;
+    line-height: 125%;
+    padding-top: @primary-space;
+  }
+
+  &__subtitle1,
+  &__subtitle2 {
+    text-align: center;
+    color: @color-light;
+    font-family: @font-montserrat;
+    font-size: @font-size-small;
+  }
+
+  &__subtitle1 {
+    padding-top: @primary-space;
+  }
+
+  &__subtitle2 {
+    padding-bottom: @primary-space;
+  }
+}
+
+// ! ================================== MEDIA QUERIES ==================================
+
+@media screen and (@tabletView) {
+
+  // * ======================== NAVBAR =======================
+  .navbar {
+    width: 769px;
+    margin: auto;
+
+    &__rightSection {
+      &-menuBtn {
+        display: block;
+      }
+
+      &_navList {
+        display: none;
+      }
+    }
+  }
+
+  // * ======================== HEADEING =======================
+  .heading {
+    width: 769px;
+  }
+
+
+  // * ======================== CONTACT SECTION =======================
+  .contactSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: @primary-space;
+    width: 769px;
+
+    &__left {
+      & p {
+        display: inline-block;
+        margin: auto;
+      }
+    }
+  }
+
+  // * ======================== TRENDING SECTION =======================
+  .trendingSection {
+    width: 769px;
+    margin-bottom: @primary-space*25;
+    display: flex;
+    flex-direction: column;
+
+    &__left {
+      &-img {
+        width: 72rem;
+        height: 40.5rem;
+      }
+    }
+
+    &__right {
+      height: 36rem;
+
+      &-img {
+        margin-top: -(@primary-space - .8rem);
+      }
+    }
+  }
+
+  // * ======================== EXPLORE SECTION =======================
+  .exploreSection {
+    margin-top: 20rem;
+    width: 769px;
+
+    &__gallery {
+      width: 72rem;
+      grid-template-columns: repeat(3, 1fr);
+
+      &_cards {
+        width: 20.8rem;
+        height: 26.5rem;
+
+        &-image {
+          width: 20.8rem;
+          height: 9rem;
+        }
+
+        &-text {
+          width: inherit;
+        }
+
+        &-button {
+          width: 20.5rem;
+          height: 5.9rem;
+        }
+      }
+    }
+  }
+
+  // * ======================== VISIT AGAIN SECTION =======================
+  .visitAgain_Section {
+    margin-bottom: @primary-space*18rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    background: @color-light;
+    width: 100vw;
+
+    &__left {
+      &-title {
+        font-size: @font-size-normal;
+      }
+
+      &--list {
+        &1 {
+          li a {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    &__container {
+      height: 20rem;
+
+      &--content {
+        &::before {
+          content: "";
+          width: @primary-space;
+          height: @primary-space - 2rem;
+          background-color: @color-light;
+          position: relative;
+          top: -@primary-space;
+          left: @primary-space*3;
+        }
+      }
+    }
+  }
+
+  // * ======================== EXPLORE MORE SECTION =======================
+  .exploreMoreSection {
+    display: flex;
+    justify-content: space-around;
+    gap: 4rem;
+
+    &__left {
+      &-title {
+        font-size: @font-size-small;
+      }
+
+      gap: 4rem;
+
+      &--list {
+        gap: @primary-space;
+
+        li a {
+          padding-bottom: @font-size-small;
+          font-weight: 300;
+        }
+      }
+    }
+
+    &__mid {
+      &-title {
+        font-size: @font-size-small;
+      }
+
+      gap: 4rem;
+
+      &--list {
+        gap: @primary-space;
+
+        li a {
+          padding-bottom: @font-size-small;
+          font-weight: 300;
+        }
+      }
+    }
+
+    &__right {
+      &--list {
+        gap: @primary-space;
+
+        li a {
+          font-size: @font-size-normal;
+          color: @color-primary;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  // * ======================== FOOTER SECTION =======================
+  .footerSection {
+    width: 100vw;
+  }
+}
+
+
+// ? =========================== MOBILE VIEW ===========================
+@media screen and (@mobileView) {
+
+  // * ======================== NAVBAR =======================
+  .navbar {
+    width: 100vw*@primary-space;
+    margin: auto;
+    padding: 0 @primary-space;
+
+    &__rightSection {
+      &-menuBtn {
+        display: block;
+      }
+
+      &_navList {
+        display: none;
+      }
+    }
+  }
+
+  // * ======================== HEADEING =======================
+  .heading {
+    width: 37.5rem;
+    margin: @primary-space 70%;
+  }
+
+
+  // * ======================== CONTACT SECTION =======================
+  .contactSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: @primary-space;
+    width: 37.5rem;
+    .alignItemCenter-MobileView();
+
+    &__left {
+      & p {
+        display: inline-block;
+        margin: auto;
+      }
+    }
+
+    &__right {
+      display: flex;
+      flex-direction: column;
+      margin: @primary-space 30%;
+
+    }
+  }
+
+  // * ======================== TRENDING SECTION =======================
+  .trendingSection {
+    width: 44.5rem;
+    margin-bottom: @primary-space*25;
+    display: flex;
+    flex-direction: column;
+    margin: @primary-space 20%;
+    margin-bottom: @primary-space*24;
+
+    &__left {
+      &-img {
+        width: @primary-space*30;
+        height: 40.5rem;
+      }
+    }
+
+    &__right {
+      height: 36rem;
+
+      &-img {
+        margin-top: -(@primary-space - .8rem);
+      }
+    }
+  }
+
+  // * ======================== EXPLORE SECTION =======================
+  .exploreSection {
+    margin-top: 20rem;
+    .alignItemCenter-MobileView();
+
+
+    &__gallery {
+      width: 37.5rem;
+      grid-template-columns: 1fr;
+
+      &_cards {
+        width: 37.5rem - @primary-space;
+        height: 37.5rem;
+
+        &-image {
+          width: 37.5rem - @primary-space;
+          height: 18rem;
+        }
+
+        &-text {
+          width: inherit;
+        }
+
+        &-button {
+          width: 20.5rem;
+          height: 5.9rem;
+        }
+      }
+    }
+  }
+
+  // * ======================== VISIT AGAIN SECTION =======================
+  .visitAgain_Section {
+    margin-bottom: @primary-space*18rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    background: @color-light;
+    .alignItemCenter-MobileView();
+
+    &__left {
+      &-title {
+        font-size: @font-size-normal;
+      }
+
+      &--list {
+        display: flex;
+        flex-direction: column;
+
+        &1 {
+          li a {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    &__container {
+      height: 20rem;
+
+      &--content {
+        display: flex;
+        flex-direction: column;
+
+        &-text {
+          padding-bottom: @primary-space;
+        }
+
+        &-button {
+          display: flex;
+          justify-content: center;
+        }
+
+        &::before {
+          content: "";
+          width: @primary-space;
+          height: @primary-space - 2rem;
+          background-color: @color-light;
+          position: relative;
+          top: -@primary-space;
+          left: -(@primary-space - 2.2rem);
+        }
+      }
+    }
+  }
+
+  // * ======================== EXPLORE MORE SECTION =======================
+  .exploreMoreSection {
+    display: flex;
+    justify-content: space-around;
+    gap: 4rem;
+    .alignItemCenter-MobileView();
+
+    &__left {
+      &-title {
+        font-size: @font-size-small;
+      }
+
+      gap: 4rem;
+
+      &--list {
+        gap: @primary-space;
+
+        li a {
+          padding-bottom: @font-size-small;
+          font-weight: 300;
+        }
+      }
+    }
+
+    &__mid {
+      &-title {
+        font-size: @font-size-small;
+      }
+
+      gap: 4rem;
+
+      &--list {
+        gap: @primary-space;
+
+        li a {
+          padding-bottom: @font-size-small;
+          font-weight: 300;
+        }
+      }
+    }
+
+    &__right {
+      &--list {
+        gap: @primary-space;
+
+        li a {
+          font-size: @font-size-normal;
+          color: @color-primary;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  // * ======================== FOOTER SECTION =======================
+  .footerSection {
+    .alignItemCenter-MobileView();
+    width: 100%*2.5;
+    transform: translate(-20%);
+    padding: @primary-space  !important;
+  }
+}

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="main.css">
+
+
+    <!--? ==================== LESS CDN ==================== -->
+    <link rel="stylesheet/less" type="text/css" href="main.less" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/4.1.3/less.min.js"></script>
+
+
+    <!--? ==================== Ionicons ==================== -->
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
+</head>
+
+<body>
+    <div class="mainContainer">
+
+        <!-- ! ============================== Navbar ============================== -->
+        <nav id="home" class="navbar">
+            <div class="navbar__leftSection">
+                <div class="navbar__leftSection-logo"><a href="#home">
+                        <ion-icon name="airplane"></ion-icon>
+                    </a></ion-icon>
+                </div>
+            </div>
+            <div class="navbar__rightSection">
+                <ul class="navbar__rightSection_navList">
+                    <li class="navbar__rightSection_navList-items"><a href="#home">Home</a></li>
+                    <li class="navbar__rightSection_navList-items"><a href="#trending">Trending</a></li>
+                    <li class="navbar__rightSection_navList-items"><a href="#explore">Explore</a></li>
+                    <li class="navbar__rightSection_navList-items"><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="navbar__rightSection-menuBtn">
+                    <ion-icon name="menu"></ion-icon>
+                </div>
+            </div>
+        </nav>
+
+        <!-- ! ============================== Desktop Dropdown ============================== -->
+        <div class="desktopDropdown">
+            <div class="desktopDropdown--list">
+                <div class="desktopDropdown--list-title">Ipsum lorem</div>
+                <ul>
+                    <li><a href="">Link</a></li>
+                    <li><a href="">Link</a></li>
+                    <li><a href="">Link</a></li>
+                    <li><a href="">Link</a></li>
+                    <li><a href="">Link</a></li>
+                </ul>
+            </div>
+            <div class="desktopDropdown--list">
+                <div class="desktopDropdown--list-title">Ipsum lorem</div>
+                <ul>
+                    <li><a href="">Link</a></li>
+                    <li><a href="">Link</a></li>
+                    <li><a href="">Link</a></li>
+                    <li><a href="">Link</a></li>
+                    <li><a href="">Link</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+        <!-- ! ============================== Mobile Dropdown ============================== -->
+        
+
+        <!-- ! ============================== Heading ============================== -->
+        <section class="heading">Proident anim <span class="heading-bold">nor nulla iste.</span></section>
+
+        <!-- ! ============================== Contact Secion ============================== -->
+        <section id="contact" class="contactSection">
+            <div class="contactSection__left">
+                <p class="contactSection__left-text">Minim modi yet omnis nor quia so minima.</p>
+            </div>
+            <div class="contactSection__right">
+                <div class="contactSection__right_btns">
+                    <ion-icon class="contactSection__right_btns-icon" name="mail"></ion-icon><span
+                        class="contactSection__right_btns-text">Email</span>
+                </div>
+                <div class="contactSection__right_btns">
+                    <ion-icon class="contactSection__right_btns-icon" name="link"></ion-icon><span
+                        class="contactSection__right_btns-text">Website</span>
+                </div>
+                <div class="contactSection__right_btns">
+                    <ion-icon class="contactSection__right_btns-icon" name="pin"></ion-icon><span
+                        class="contactSection__right_btns-text">Location</span>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ! ============================== Trending Secion ============================== -->
+        <section id="trending" class="trendingSection">
+            <div class="trendingSection__left">
+                <div class="trendingSection__left-img"></div>
+                <div class="trendingSection__left-text">
+                    <span>
+                        <ion-icon name="link"></ion-icon><a href="">Lorem ipsum</a>
+                    </span>
+                    <span>
+                        <ion-icon name="link"></ion-icon><a href="">Lorem ipsum</a>
+                    </span>
+                    <span>
+                        <ion-icon name="link"></ion-icon><a href="">Lorem ipsum</a>
+                    </span>
+                </div>
+            </div>
+            <div class="trendingSection__right">
+                <div class="trendingSection__right-text">
+                    <p class="trendingSection__right-text1">Numquam. <b>Esse aliquip do, magni.</b></p>
+                    <p class="trendingSection__right-text2">Minima ad for vitae sit</p>
+                    <p class="trendingSection__right-text3">Ipsum Lorem</p>
+                </div>
+                <div class="trendingSection__right-img"></div>
+                <div class="trendingSection__right_bottom-content">
+                    <div class="trendingSection__right_bottom-content1">
+                        <ion-icon name="link"></ion-icon><a href="">Ipsum Lorem</a>
+                    </div>
+                    <div class="trendingSection__right_bottom-content2">Adipisicing unde vel so dolore, consequatur.
+                    </div>
+                    <div class="trendingSection__right_bottom-content3">Ipsum Lorem</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ! ============================== Explore Secion ============================== -->
+        <section id="explore" class="exploreSection">
+            <div class="exploreSection__header">
+                <div class="exploreSection__header-title">Explore</div>
+                <div class="exploreSection__header-link">Ipsum Lorem</div>
+            </div>
+
+            <div class="exploreSection__gallery">
+                <div class="exploreSection__gallery_cards">
+                    <div class="exploreSection__gallery_cards-image"></div>
+                    <div class="exploreSection__gallery_cards-text">Adipisicing unde vel so dolore, consequatur.</div>
+                    <div class="exploreSection__gallery_cards-button">
+                        <ion-icon name="link"></ion-icon><button>Ipsum Lorem</button>
+                    </div>
+                </div>
+                <div class="exploreSection__gallery_cards">
+                    <div class="exploreSection__gallery_cards-image"></div>
+                    <div class="exploreSection__gallery_cards-text">Adipisicing unde vel so dolore, consequatur.</div>
+                    <div class="exploreSection__gallery_cards-button">
+                        <ion-icon name="link"></ion-icon><button>Ipsum Lorem</button>
+                    </div>
+                </div>
+                <div class="exploreSection__gallery_cards">
+                    <div class="exploreSection__gallery_cards-image"></div>
+                    <div class="exploreSection__gallery_cards-text">Adipisicing unde vel so dolore, consequatur.</div>
+                    <div class="exploreSection__gallery_cards-button">
+                        <ion-icon name="link"></ion-icon><button>Ipsum Lorem</button>
+                    </div>
+                </div>
+                <div class="exploreSection__gallery_cards">
+                    <div class="exploreSection__gallery_cards-image"></div>
+                    <div class="exploreSection__gallery_cards-text">Adipisicing unde vel so dolore, consequatur.</div>
+                    <div class="exploreSection__gallery_cards-button">
+                        <ion-icon name="link"></ion-icon><button>Ipsum Lorem</button>
+                    </div>
+                </div>
+                <div class="exploreSection__gallery_cards">
+                    <div class="exploreSection__gallery_cards-image"></div>
+                    <div class="exploreSection__gallery_cards-text">Adipisicing unde vel so dolore, consequatur.</div>
+                    <div class="exploreSection__gallery_cards-button">
+                        <ion-icon name="link"></ion-icon><button>Ipsum Lorem</button>
+                    </div>
+                </div>
+                <div class="exploreSection__gallery_cards">
+                    <div class="exploreSection__gallery_cards-image"></div>
+                    <div class="exploreSection__gallery_cards-text">Adipisicing unde vel so dolore, consequatur.</div>
+                    <div class="exploreSection__gallery_cards-button">
+                        <ion-icon name="link"></ion-icon><button>Ipsum Lorem</button>
+                    </div>
+                </div>
+                <div class="exploreSection__gallery_cards">
+                    <div class="exploreSection__gallery_cards-image"></div>
+                    <div class="exploreSection__gallery_cards-text">Adipisicing unde vel so dolore, consequatur.</div>
+                    <div class="exploreSection__gallery_cards-button">
+                        <ion-icon name="link"></ion-icon><button>Ipsum Lorem</button>
+                    </div>
+                </div>
+                <div class="exploreSection__gallery_cards">
+                    <div class="exploreSection__gallery_cards-image"></div>
+                    <div class="exploreSection__gallery_cards-text">Adipisicing unde vel so dolore, consequatur.</div>
+                    <div class="exploreSection__gallery_cards-button">
+                        <ion-icon name="link"></ion-icon><button>Ipsum Lorem</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ! ============================== Vsit Again Secion ============================== -->
+        <section id="visitAgain" class="visitAgain_Section">
+            <div class="visitAgain_Section__container">
+                <div class="visitAgain_Section__container-backgroundImg"></div>
+                <div class="visitAgain_Section__container--content">
+                    <div class="visitAgain_Section__container--content-text">Esse aliquip do, magni!</div>
+                    <div class="visitAgain_Section__container--content-button">
+                        <div>
+                            <ion-icon name="cart"></ion-icon>
+                        </div>
+                        <div><button>Lorem</button></div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="visitAgain_Section__container">
+                <div class="visitAgain_Section__container-backgroundImg"></div>
+                <div class="visitAgain_Section__container--content">
+                    <div class="visitAgain_Section__container--content-text">Esse aliquip do, magni!</div>
+                    <div class="visitAgain_Section__container--content-button">
+                        <div>
+                            <ion-icon name="cart"></ion-icon>
+                        </div>
+                        <div><button>Lorem</button></div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="visitAgain_Section__container">
+                <div class="visitAgain_Section__container-backgroundImg"></div>
+                <div class="visitAgain_Section__container--content">
+                    <div class="visitAgain_Section__container--content-text">Esse aliquip do, magni!</div>
+                    <div class="visitAgain_Section__container--content-button">
+                        <div>
+                            <ion-icon name="cart"></ion-icon>
+                        </div>
+                        <div><button>Lorem</button></div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+
+        <!-- ! ============================== Explore More Secion ============================== -->
+        <secton id="exploreMore" class="exploreMoreSection">
+            <div class="exploreMoreSection__left">
+                <div class="exploreMoreSection__left-title">Illum magnam aliquam</div>
+                <div class="exploreMoreSection__left--list">
+                    <ul class="exploreMoreSection__left--list1">
+                        <li><a href="">Ipsum Lorem</a></li>
+                        <li><a href="">Ipsum Lorem</a></li>
+                        <li><a href="">Ipsum Lorem</a></li>
+                        <li><a href="">Ipsum Lorem</a></li>
+                        <li><a href="">Ipsum Lorem</a></li>
+                    </ul>
+                    <ul class="exploreMoreSection__left--list2">
+                        <li><a href="">Ipsum Lorem</a></li>
+                        <li><a href="">Ipsum Lorem</a></li>
+                        <li><a href="">Ipsum Lorem</a></li>
+                        <li><a href="">Ipsum Lorem</a></li>
+                        <li><a href="">Ipsum Lorem</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="exploreMoreSection__mid">
+
+                <div class="exploreMoreSection__mid-title">Quia so minima</div>
+                <div class="exploreMoreSection__mid--list">
+                    <ul class="exploreMoreSection__mid--list1">
+                        <li><a href="">Ipsum Lorem</a></li>
+                        <li><a href="">Ipsum Lorem</a></li>
+                        <li><a href="">Ipsum Lorem</a></li>
+                        <li><a href="">Ipsum Lorem</a></li>
+                        <li><a href="">Ipsum Lorem</a></li>
+                    </ul>
+
+                    <ul class="exploreMoreSection__mid--list2">
+                        <li><a href="">Ipsum Lorem</a></li>
+                        <li><a href="">Ipsum Lorem</a></li>
+                        <li><a href="">Ipsum Lorem</a></li>
+                        <li><a href="">Ipsum Lorem</a></li>
+                        <li><a href="">Ipsum Lorem</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="exploreMoreSection__right">
+                <div class="exploreMoreSection__right-title">Quia so minima</div>
+                <ul class="exploreMoreSection__right--list">
+                    <li><a href="">
+                            <ion-icon name="cart"></ion-icon> Lorem1
+                        </a></li>
+                    <li><a href="">
+                            <ion-icon name="cart"></ion-icon> Lorem2
+                        </a></li>
+                    <li><a href="">
+                            <ion-icon name="cart"></ion-icon> Lorem3
+                        </a></li>
+                    <li><a href="">
+                            <ion-icon name="cart"></ion-icon> Lorem4
+                        </a></li>
+                </ul>
+
+
+            </div>
+        </secton>
+
+
+        <!-- ! ============================== Footer Secion ============================== -->
+        <section id="footer" class="footerSection">
+            <div class="footerSection__title">Minima ad for vitae sit</div>
+            <div class="footerSection__subtitle1">Numquam. Esse aliquip do, magni.</div>
+            <div class="footerSection__subtitle2">Aut proident and voluptate sunt quisquam so voluptate nemo</div>
+        </section>
+
+    </div>
+
+
+    <script src="./app.js"></script>
+</body>
+
+</html>
