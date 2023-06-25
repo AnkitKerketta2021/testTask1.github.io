@@ -28,7 +28,7 @@
 
 // Media Queries Screen
 @tabletView: ~"(max-width: 768px)";
-@mobileView: ~"(max-width: 375px)";
+@mobileView: ~"(max-width: 376px)";
 
 
 // Images
@@ -811,16 +811,16 @@ body {
     width: 769px;
 
     &__gallery {
-      width: 72rem;
+      width: 70rem;
       grid-template-columns: repeat(3, 1fr);
 
       &_cards {
-        width: 20.8rem;
-        height: 26.5rem;
+        width: 15rem + @primary-space;
+        height: 25rem;
 
         &-image {
-          width: 20.8rem;
-          height: 9rem;
+          width: 15rem + @primary-space;
+          height: 10rem;
         }
 
         &-text {
@@ -828,8 +828,8 @@ body {
         }
 
         &-button {
-          width: 20.5rem;
-          height: 5.9rem;
+          width: 16.5rem ;
+          height: 5rem;
         }
       }
     }
@@ -868,7 +868,7 @@ body {
           background-color: @color-light;
           position: relative;
           top: -@primary-space;
-          left: @primary-space*3;
+          left: @primary-space*3.5;
         }
       }
     }
